@@ -1,0 +1,160 @@
+body {
+  margin: 0; }
+
+* {
+  box-sizing: border-box; }
+
+#main-header {
+  background-image: url(../img/header-background.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  position: relative; }
+  #main-header .welcome-container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Lato", sans-serif;
+    font-size: 100px;
+    line-height: 130px;
+    color: #ecf0f1;
+    overflow: hidden;
+    height: 130px; }
+    #main-header .welcome-container:after {
+      content: "_";
+      position: absolute;
+      top: 0;
+      right: 0;
+      animation-name: underscore;
+      animation-duration: 1.66666666667s;
+      animation-iteration-count: infinite; }
+    #main-header .welcome-container .welcome-container-text {
+      display: inline;
+      float: left;
+      margin: 0; }
+    #main-header .welcome-container .welcome-container-list {
+      margin-top: 0;
+      padding-left: 300px;
+      text-align: left;
+      list-style: none;
+      animation-name: change;
+      animation-duration: 10s;
+      animation-iteration-count: infinite; }
+      #main-header .welcome-container .welcome-container-list .item {
+        line-height: 40px;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        color: #16a085;
+        font-size: 42px;
+        line-height: 40px;
+        animation-name: opacity;
+        animation-duration: 2s;
+        animation-iteration-count: infinite; }
+  #main-header button {
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    line-height: 50px;
+    width: 200px;
+    font-family: "Lato", sans-serif;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 25px; }
+    #main-header button a {
+      text-decoration: none;
+      color: #000; }
+
+@keyframes opacity {
+  0%,
+  100% {
+    opacity: 0; }
+  5%,
+  85% {
+    opacity: 1; } }
+
+@keyframes underscore {
+  0%,
+  100% {
+    opacity: 0; }
+  50% {
+    opacity: 1; } }
+
+@keyframes change {
+  0%,
+  12.66%,
+  100% {
+    transform: translateY(0); }
+  16.66%,
+  29.32% {
+    transform: translateY(-25%); }
+  33.32%,
+  45.98% {
+    transform: translateY(-50%); }
+  49.98%,
+  62.64% {
+    transform: translateY(-75%); }
+  66.64%,
+  79.3% {
+    transform: translateY(-50%); }
+  83.3%,
+  95.96% {
+    transform: translateY(-25%); } }
+
+#about {
+  height: 100vh;
+  font-family: "Pacifico", cursive;
+  font-size: 20px; }
+  #about .about-top {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%; }
+    #about .about-top .about-top-left {
+      position: absolute;
+      border-top: 100px solid red;
+      border-right: 64vw solid transparent; }
+    #about .about-top .about-top-right {
+      position: absolute;
+      right: 0;
+      border-top: 100px solid red;
+      border-left: 35vw solid transparent; }
+  #about p {
+    color: #ecf0f1;
+    border-bottom: 3px solid #ecf0f1;
+    width: 300px;
+    text-align: center;
+    position: absolute;
+    left: 65%;
+    transform: translateX(-50%);
+    font-size: 1em;
+    margin: 0; }
+  #about h2 {
+    font-family: "Pacifico", cursive;
+    font-size: 5em;
+    font-weight: 400;
+    text-align: center; }
+  #about .about-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: center; }
+    #about .about-container .about-left {
+      width: 50%;
+      align-self: center; }
+    #about .about-container .about-right {
+      background-image: url(../img/jan-nowak.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 30%;
+      align-items: center; }
+      #about .about-container .about-right figure {
+        margin: 0;
+        opacity: 0;
+        transition: 1s; }
+        #about .about-container .about-right figure:hover {
+          opacity: 1; }
+        #about .about-container .about-right figure img {
+          width: 100%; }

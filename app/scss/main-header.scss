@@ -1,0 +1,133 @@
+@import 'variables';
+
+#main-header {
+    background-image: url(../img/header-background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+
+    .welcome-container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Lato", sans-serif;
+    font-size: 100px;
+    line-height: 130px;
+    color: #ecf0f1;
+    overflow: hidden;
+    height: 130px;
+        
+        &:after{
+            content: "_";
+            position: absolute;
+            top: 0;
+            right: 0;
+            
+            animation-name: underscore;
+            animation-duration: 1.66666666667s;
+            animation-iteration-count: infinite;
+        }
+        .welcome-container-text {    
+            display: inline;
+            float: left;
+            margin: 0;
+        }
+        
+        .welcome-container-list{
+            margin-top: 0;
+            padding-left: 300px;
+            text-align: left;
+            list-style: none;
+            
+            animation-name: change;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            
+            .item{
+            line-height: 40px;
+            margin: 0;
+                
+            position: absolute;
+            top: 0;
+            color: #16a085;
+            font-size: 42px;
+            line-height: 40px;
+            animation-name: opacity;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+                
+            }
+        }
+    }
+
+    
+    button{
+            top: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            line-height: 50px;
+            width: 200px;
+            font-family: $fontLato;
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            border-radius: 25px;
+            
+            a{
+                text-decoration: none;
+                color: $black;
+                }
+    }
+}
+
+@keyframes opacity {
+    0%,
+    100%{
+        opacity: 0;
+    }
+    5%,
+    85%{   
+        opacity: 1;
+    }
+}
+
+@keyframes underscore{
+    0%,
+    100%{
+        opacity: 0;
+    }
+    
+    50%{
+        opacity: 1;
+    }
+}
+
+@keyframes change {
+    0%,
+    12.66%,
+    100% {
+        transform: translateY(0);
+    }
+    16.66%,
+    29.32% {
+        transform: translateY(-25%);
+    }
+    33.32%,
+    45.98% {
+        transform: translateY(-50%);
+    }
+    49.98%,
+    62.64% {
+        transform: translateY(-75%);
+    }
+    66.64%,
+    79.3% {
+        transform: translateY(-50%);
+    }
+    83.3%,
+    95.96% {
+        transform: translateY(-25%);
+    }
+}
+
