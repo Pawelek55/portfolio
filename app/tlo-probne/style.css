@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+}
+.tlo{
+    background-image: url(Mans-Hands-Typing-On-Laptop-With-Smartphone-Book-And-Coffee.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.kubek figure{
+    font-family: 'Pacifico', cursive;
+    position: absolute;
+    right: 50px;
+    margin: 0;
+    opacity: 0;
+    transition: 1s;
+    transition-timing-function: ease;
+    font-size: 30px;
+    top: 100px;
+}
+
+.kubek figure:hover{
+    opacity: 1;
+}
+
+.kubek figure::before{
+    content: 'O mnie';
+    width: 300px;
+    border-bottom: 5px solid yellowgreen;
+    position: absolute;
+    left: -107px;
+    top: 175px;
+    padding-left: 37px;
+}
+
