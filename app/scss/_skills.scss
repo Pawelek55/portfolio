@@ -1,0 +1,205 @@
+@import 'variables';
+
+#skills {
+    font-family: $fontPacifico;
+//    position: relative;
+    
+    .skills-top-left,
+    .skills-top-right {
+        position: absolute;
+
+    }
+
+    .skills-top-left {
+        border-right: 65vw solid white;
+        border-bottom: 100px solid #6C6C6C;
+
+    }
+
+    .skills-top-right {
+        right: 0;
+        border-left: 35vw solid white;
+        border-bottom: 100px solid #6C6C6C;
+    }
+
+    
+
+    h2 {
+        @include h2;
+//        top: -1%
+    }
+
+    .skills-icon {
+        padding-top: 100px;
+        overflow: hidden;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+        border-top: 1px solid white;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    figure {
+        opacity: 0;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+//    .html:hover 
+//    .css:hover,
+//    .js:hover,
+//    .jquery:hover,
+//    .ajax:hover,
+//    .bootstrap:hover,
+//    .gulp:hover,
+//    .sass:hover,
+//    .rwd:hover,
+//    .git:hover {
+///*        opacity: 1;
+//        position: relative;*/
+//
+///*        &:before {
+//            content: "";
+//            top: 30%;
+//            position: absolute;
+//            font-size: 50px;
+//            animation: slideName 1s forwards;
+//            display: block;
+//            left: 20%;
+//            z-index: -1;
+//        }*/
+//        
+//    }
+//    
+//    .html:hover{
+//        @include forHover;
+//        
+//        &:before{
+//            content: "html 5";
+//            @include slideLeft;
+//        }
+//    }
+//    
+//    .js:hover{
+//        @include forHover;
+//	        -webkit-animation: slide-rotate-hor-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+//	        animation: slide-rotate-hor-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+//
+//        &:before{
+//            content: "javascript";
+//            @include slideLeft;
+//            
+//        }
+//    }
+
+
+    .bounceInLeft{
+
+        -webkit-animation-name: bounceInLeft;
+        animation-name: bounceInLeft;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        opacity: 1;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    @keyframes bounceInLeft {
+        0%,
+        60%,
+        75%,
+        90%,
+        100% {
+            -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        }
+        0% {
+            opacity: 0;
+            -webkit-transform: translate3d(-3000px, 0, 0);
+            transform: translate3d(-3000px, 0, 0);
+        }
+        45% {
+            opacity: 1;
+            -webkit-transform: translate3d(25px, 0, 0);
+            transform: translate3d(60%, 0, 0);
+        }
+        60% {
+            -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(54%, 0, 0);
+        }
+        75% {
+            -webkit-transform: translate3d(5px, 0, 0);
+            transform: translate3d(58%, 0, 0);
+        }
+        90% {
+            -webkit-transform: translate3d(5px, 0, 0);
+            transform: translate3d(55.5%, 0, 0);
+        }
+        100% {
+            -webkit-transform: none;
+            transform: translateX(56.54%);
+
+        }
+    }
+
+    .bounceInRight {
+        -webkit-animation-name: bounceInRight;
+        animation-name: bounceInRight;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        opacity: 1;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    @keyframes bounceInRight {
+        0%,
+        60%,
+        75%,
+        90%,
+        100% {
+            -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        }
+        0% {
+            opacity: 0;
+            -webkit-transform: translate3d(-3000px, 0, 0);
+            transform: translate3d(3000px, 0, 0);
+        }
+        45% {
+            opacity: 1;
+            -webkit-transform: translate3d(25px, 0, 0);
+            transform: translate3d(6.54%, 0, 0);
+        }
+        60% {
+            -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(12%, 0, 0);
+        }
+        75% {
+            -webkit-transform: translate3d(5px, 0, 0);
+            transform: translate3d(8%, 0, 0);
+        }
+        90% {
+            -webkit-transform: translate3d(5px, 0, 0);
+            transform: translate3d(11.5%, 0, 0);
+        }
+        100% {
+            -webkit-transform: none;
+            transform: translateX(10.54%);
+
+        }
+    }
+
+    @keyframes slideName {
+        0% {
+            transform: translateX(185%);
+        }
+    }
+}
+

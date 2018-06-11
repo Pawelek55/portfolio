@@ -1,0 +1,31 @@
+#main-nav{
+    position: fixed;
+    z-index: 3;
+    top: 100px;
+    left: 0;
+    background-color: transparent;
+    display: none;
+    
+    ul{
+        list-style: none;
+        
+        a{
+            text-decoration: none;
+            font-family: $fontPacifico;
+            font-size: 25px;
+            color: #D1382B;
+            
+            li{
+                span{
+                    opacity: 0;
+                    transition: 0.4s;
+                    
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
