@@ -1,0 +1,19 @@
+@import 'variables';
+
+body{
+    margin: 0;
+    font-family: $fontMontserrat; 
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@import 'main-header';
+@import 'about';
+@import 'skills';
+@import 'contact';
+@import 'footer';
+@import 'nav';
+@import 'response';

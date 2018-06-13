@@ -1,0 +1,29 @@
+#main-nav {
+    position: fixed;
+    z-index: 3;
+    top: 100px;
+    left: 0;
+    background-color: transparent;
+    display: none;
+
+    ul {
+        list-style: none;
+
+        li {
+            color: #D1382B;
+            font-family: $fontMontserrat;
+            font-size: 45px;
+
+            a {
+                text-decoration: none;
+                color: #D1382B;
+            }
+            
+            .othersShow {
+                    opacity: 0;
+                    -webkit-transition: 0.4s;
+                    transition: 0.4s;
+            }
+        }
+    }
+}

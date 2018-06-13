@@ -1,0 +1,192 @@
+#main-header {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../img/header-background.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/header-background.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  position: relative; }
+  #main-header .welcome-container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: "Lato", sans-serif;
+    font-size: 100px;
+    line-height: 130px;
+    color: #ecf0f1;
+    height: 130px;
+    overflow: hidden; }
+    #main-header .welcome-container .welcome-container-text {
+      display: inline;
+      float: left;
+      margin: 0; }
+    #main-header .welcome-container .welcome-container-list {
+      margin-top: 0;
+      padding-left: 300px;
+      text-align: left;
+      list-style: none;
+      -webkit-animation-name: change;
+      animation-name: change;
+      -webkit-animation-duration: 10s;
+      animation-duration: 10s;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite; }
+      #main-header .welcome-container .welcome-container-list .item {
+        line-height: 40px;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        color: #16a085;
+        font-size: 42px;
+        line-height: 40px;
+        -webkit-animation-name: opacity;
+        animation-name: opacity;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite; }
+      #main-header .welcome-container .welcome-container-list .item-first::after {
+        content: "_";
+        position: absolute;
+        -webkit-animation-name: underscore;
+        animation-name: underscore;
+        -webkit-animation-duration: 1.66666666667s;
+        animation-duration: 1.66666666667s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        right: 50px; }
+      #main-header .welcome-container .welcome-container-list .item-first span {
+        color: transparent; }
+      #main-header .welcome-container .welcome-container-list .item-second:after,
+      #main-header .welcome-container .welcome-container-list .item-third:after,
+      #main-header .welcome-container .welcome-container-list .item-fourth:after {
+        content: "_";
+        position: absolute;
+        -webkit-animation-name: underscore;
+        animation-name: underscore;
+        -webkit-animation-duration: 1.66666666667s;
+        animation-duration: 1.66666666667s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite; }
+  #main-header .button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 3px gray, 0px 4px #767676, 0px 5px #6c6c6c, 0px 6px #626262, 0px 7px #585858, 0px 8px #4e4e4e, 0px 14px 6px -1px gray;
+    box-shadow: 0px 3px gray, 0px 4px #767676, 0px 5px #6c6c6c, 0px 6px #626262, 0px 7px #585858, 0px 8px #4e4e4e, 0px 14px 6px -1px gray;
+    /* shadow */
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out; }
+    #main-header .button .button-text {
+      background-color: #E8E8E8;
+      border-radius: 10px;
+      -webkit-transition: -webkit-transform .1s ease-in-out;
+      transition: -webkit-transform .1s ease-in-out;
+      transition: transform .1s ease-in-out;
+      transition: transform .1s ease-in-out, -webkit-transform .1s ease-in-out;
+      display: inline-block;
+      padding: 10px 40px 10px 40px;
+      color: #3A474D;
+      font-weight: 700;
+      font-size: 32px;
+      text-shadow: 0px 1px #fff, 0px -1px #262F33; }
+      #main-header .button .button-text:hover {
+        color: #D1382B;
+        text-shadow: 0px -1px #bf291c;
+        cursor: pointer; }
+    #main-header .button:active {
+      -webkit-box-shadow: 0px 2px gray, 0px 4px #767676, 0px 5px #6c6c6c, 0px 6px #626262, 0px 7px #585858, 0px 8px #4e4e4e, 0px 10px 2px 0px rgba(128, 128, 128, 0.6);
+      box-shadow: 0px 2px gray, 0px 4px #767676, 0px 5px #6c6c6c, 0px 6px #626262, 0px 7px #585858, 0px 8px #4e4e4e, 0px 10px 2px 0px rgba(128, 128, 128, 0.6); }
+    #main-header .button:active .button-text {
+      -webkit-transform: translate(0, 5px);
+      transform: translate(0, 5px); }
+
+@-webkit-keyframes opacity {
+  0%,
+  100% {
+    opacity: 0; }
+  5%,
+  85% {
+    opacity: 1; } }
+
+@keyframes opacity {
+  0%,
+  100% {
+    opacity: 0; }
+  5%,
+  85% {
+    opacity: 1; } }
+
+@-webkit-keyframes underscore {
+  0%,
+  100% {
+    opacity: 0; }
+  50% {
+    opacity: 1; } }
+
+@keyframes underscore {
+  0%,
+  100% {
+    opacity: 0; }
+  50% {
+    opacity: 1; } }
+
+@-webkit-keyframes change {
+  0%,
+  12.66%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  16.66%,
+  29.32% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%); }
+  33.32%,
+  45.98% {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  49.98%,
+  62.64% {
+    -webkit-transform: translateY(-75%);
+    transform: translateY(-75%); }
+  66.64%,
+  79.3% {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  83.3%,
+  95.96% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%); } }
+
+@keyframes change {
+  0%,
+  12.66%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  16.66%,
+  29.32% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%); }
+  33.32%,
+  45.98% {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  49.98%,
+  62.64% {
+    -webkit-transform: translateY(-75%);
+    transform: translateY(-75%); }
+  66.64%,
+  79.3% {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  83.3%,
+  95.96% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%); } }
