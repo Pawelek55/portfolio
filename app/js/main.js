@@ -1,103 +1,3 @@
-/*$(document).ready(function(){
-    console.log('Pablo');
-});*/
-
-//var fromTop = $(window).scrollTop()
-//console.log(fromTop);
-
-//var sectionHeight = $('.skills-icon').position();
-
-//console.log(sectionHeight);
-
-
-
-
-//console.log(elementHeight);
-
-//var amountChildren = $('.skills-icon').children();
-//console.log(amountChildren);
-//
-//        console.log(amountChildren.eq(0));
-/*for(let i=0; i<amountChildren.length; i++){
-
-    console.log(amountChildren.eq(i).height());
-    
-}
-
-    if($(this).scrollTop() > ){
-//        console.log($('.navbar').outerHeight())
-        console.log($(this).scrollTop());
-        $('.navbar').addClass('scrolled');
-        
-    } else{
-        $('.navbar').removeClass('scrolled');
-    }
-});*/
-/*        console.log(fromTop);
-        console.log(elementHeight);
-        console.log(amountChildren.eq(0));*/
-
-
-//    var elementHeight = $('.skills-icon').children().eq(0).position();
-
-/*console.log($('.skills-icon').children()[0].position());
-//console.log($('.skills-icon').children()[4].top);
-/*console.log(elementHeight.top + amountChildren.eq(1).height());
-console.log(elementHeight.top + amountChildren.eq(5).height());*/
-
-//console.log(elementHeight.top);
-
-//for(let i=0; i<amountChildren.length; i++){
-
-
-
-/*   $(document).scroll(function(){
-//    if($(this).scrollTop() > amountChildren.eq(0).height()){
-    if($(this).scrollTop() > elementHeight.top - 500){
-        amountChildren.eq(0).addClass('bounceInLeft');
-    } else{
-        amountChildren.eq(0).removeClass('bounceInLeft');
-        /*Żeby zabrać ikony wystarczy dodać klasę, która ma odrotną animację, badź animacja wyjazdu w drugą stronę*/
-//    }
-//   });*/
-
-/*       $(document).scroll(function(){
-    if($(this).scrollTop() > allElementHeight.top - 500){
-        amountChildren.eq(i).addClass('bounceInLeft');
-    } else{
-        amountChildren.eq(i).removeClass('bounceInLeft');
-    }
-   });*/
-
-
-//}
-
-
-/*1.Wysokość elementu
-2. Jeśli okno przeglądarki odjedzie od elementu o 50px to dodaje klasę
-3. Dodaje klasę 
-4.Jeśli wysokość jest mniejsza niż 50 px od określonego elemntu to go schowaj*/
-
-
-
-//for(let i=0; i<amountChildren.length; i++){
-//    var positionOfIcon = $('.skills-icon').children(i).scrollTop;
-//    console.log(positionOfIcon);
-//}
-//var js = $('.js').position().top
-//console.log($('.js').position().top)
-
-/*Left side*/
-
-/*$(document).scroll(function(){
-    console.log(window.innerWidth);
-    if($(this).scrollTop() > $('.html').position().top - 550){
-        $('.html').addClass('bounceInLeft');
-    } else{
-        $('.html').removeClass('bounceInLeft');
-    }
-});*/
-
 $(document).scroll(function () {
     if(window.outerWidth > 1200){
         if ($(this).scrollTop() > $('.html').position().top - 680) {
@@ -408,38 +308,19 @@ $(document).scroll(function () {
 });
 
 /*Menu hover*/
-$(document).ready(function(){
-    $('.what').mouseover(function(){
-        $('.others').css('opacity', '1');
-    });
-    $('.what').mouseout(function(){
-        $('.others').css('opacity', '0');
-    });
-});
 
-$(document).ready(function(){
-    $('.what1').mouseover(function(){
-        $('.others1').css('opacity', '1');
-    });
-    $('.what1').mouseout(function(){
-        $('.others1').css('opacity', '0');
-    });
-});
+let whats = document.querySelectorAll('.what');
 
-$(document).ready(function(){
-    $('.what2').mouseover(function(){
-        $('.others2').css('opacity', '1');
-    });
-    $('.what2').mouseout(function(){
-        $('.others2').css('opacity', '0');
-    });
-});
+function showOptions(e){
+    console.log(this)
+        var restOfTheSentence = this.parentElement.nextElementSibling;
+        restOfTheSentence.style.opacity = '1';
+};
 
-$(document).ready(function(){
-    $('.what3').mouseover(function(){
-        $('.others3').css('opacity', '1');
-    });
-    $('.what3').mouseout(function(){
-        $('.others3').css('opacity', '0');
-    });
-});
+function coverOptions(){
+    var restOfTheSentence = this.parentElement.nextElementSibling;
+    restOfTheSentence.style.opacity = '0';
+}
+
+whats.forEach(what => what.addEventListener('mouseover', showOptions));
+whats.forEach(what => what.addEventListener('mouseout', coverOptions));

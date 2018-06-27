@@ -606,3 +606,7 @@ footer {
     font-size: 80px; }
   #contact .contact-container .contact-container-right form input[type="submit"] {
     font-size: 64px; } }
+
+.classAdd{
+    opacity: 1;
+}
